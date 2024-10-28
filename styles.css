@@ -1,0 +1,57 @@
+/* Applying a background gradient */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Clock container styling */
+.clock-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: 300px;
+}
+
+/* Clock digits styling */
+.clock {
+    font-size: 3em;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Styling each span for individual time elements */
+.clock span {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Adding an animation effect to seconds */
+#seconds {
+    color: #ff6347;
+    animation: pulse 1s infinite;
+}
+
+/* AM/PM styling */
+#ampm {
+    font-size: 0.5em;
+    vertical-align: super;
+    color: #ffeb3b;
+}
+
+/* Animation for seconds pulsing */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
